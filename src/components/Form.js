@@ -5,11 +5,14 @@ function Form(props) {
   const [lastName, setLastName] = useState("Woods");
 
   function handleFirstNameChange(event) {
+    event.preventDefault();
     setFirstName(event.target.value);
   }
 
   function handleLastNameChange(event) {
+    event.preventDefault();
     setLastName(event.target.value);
+    console.log(lastName);
   }
 
   return (
